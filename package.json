@@ -4,7 +4,7 @@
     "description": "web clone for JS project",
     "main": "index.js",
     "scripts": {
-        "format": "lint-staged",
+        "format": "lint-staged --allow-empty",
         "clean": "prettier --single-quote --trailing-comma all --tab-width 4 --write src/**/*.{js,json,css}",
         "start": "nodemon --inspect index.js",
         "test": "echo \"Error: no test specified\" && exit 1",
