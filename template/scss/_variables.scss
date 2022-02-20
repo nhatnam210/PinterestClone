@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+//font
+$font-1: -apple-system, 'Segoe UI', sans-serif;
+$font-2: -apple-system, 'Roboto', sans-serif;
+$font-3: -apple-system, 'Ubuntu', sans-serif;
+
+//Colors
+$white: #fff;
+$red: #e60023;
+$black: #111;
+$gray-light: #efefef;
+
+//Timing
+$fade-duration: 1s;
+$columns-transition-delay: 0.2s;
+
+//Styles
+$radius: 10px;

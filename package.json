@@ -4,6 +4,7 @@
     "description": "web clone for JS project",
     "main": "index.js",
     "scripts": {
+        "watch": "node-sass --watch template/scss --output template/css",
         "formatGit": "lint-staged --allow-empty",
         "formatCode": "prettier --single-quote --trailing-comma all --tab-width 4 --write src/**/*.{js,json,css}",
         "start": "nodemon --inspect src/index.js",
@@ -32,6 +33,7 @@
     "devDependencies": {
         "husky": "^7.0.0",
         "lint-staged": "^12.3.4",
+        "node-sass": "^7.0.1",
         "nodemon": "^2.0.15",
         "prettier": "^2.5.1"
     },
