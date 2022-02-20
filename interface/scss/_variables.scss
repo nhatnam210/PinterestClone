@@ -9,12 +9,15 @@ $font-3: -apple-system, 'Ubuntu', sans-serif;
 //Colors
 $white: #fff;
 $red: #e60023;
+$red-hovered: #ad081b;
 $black: #111;
 $gray-light: #efefef;
+$gray-hovered: #e2e2e2;
 
 //Timing
 $fade-duration: 1s;
-$columns-transition-delay: 0.2s;
+$columns-transition-delay: .2s;
 
 //Styles
-$radius: 10px;
+$radius-image: 16px;
+$radius-btn: 24px;

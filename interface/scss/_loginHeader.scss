@@ -36,24 +36,32 @@ header {
 
             button {
                 padding: 8px 12px;
-                border-radius: 24px;
+                border-radius: $radius-btn;
 
                 font-size: 16px;
                 font-weight: 700;
-
-                // display: flex;
-                // justify-content: center;
-                // align-items: center;
             }
 
-            .login { 
+            .login {
                 color: $white;
                 background-color: $red;
+
+                &:hover,
+                &:active,
+                &:focus {
+                    background-color: $red-hovered;
+                }
             }
 
-            .signup  {
+            .signup {
                 margin-left: 16px;
                 background-color: $gray-light;
+
+                &:hover,
+                &:active,
+                &:focus {
+                    background-color: $gray-hovered;
+                }
             }
         }
     }
