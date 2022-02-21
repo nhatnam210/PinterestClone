@@ -76,7 +76,6 @@ input,
     width: 100%;
     border: 2px solid $gray-border;
     border-radius: $radius-input;
-    margin-bottom: 8px;
     padding: 8px 16px;
     outline: navajowhite;
 
@@ -90,6 +89,11 @@ input,
     }
 }
 
+.group-input {
+    margin-bottom: 8px;
+}
+
 .invalid-feedback {
     font-size: 12px;
 }
+
