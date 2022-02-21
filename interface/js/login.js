@@ -1,36 +1,42 @@
-const grids = document.querySelectorAll('.grid');
-const headings = document.querySelectorAll('.heading .wrapper .text');
+const grids = $('.grid');
+const gridColumns = $('.column');
+const headings = $('.heading .wrapper .text');
 
+// ban đầu các elements (grid, columns, heading) đều bị ẩn
 function enterScreen(index) {
     const grid = grids[index];
     const heading = headings[index];
-    const gridColumns = document.querySelectorAll('.column');
 
+    //hiển thị nhóm grid hiện tại
     grid.classList.add('active');
 
-    gridColumns.forEach((e) => {
-        e.classList.remove('animate-before', 'animate-after');
+    //loại bỏ các hiệu ứng animate của columns (hiển thị)
+    gridColumns.each(function () {
+        $(this).removeClass('animate-slide-in animate-slide-out');
     });
 
-    heading.classList.remove('animate-before', 'animate-after');
+    //loại bỏ các hiệu ứng animate của headings
+    heading.classList.remove('animate-slide-in', 'animate-slide-out');
 }
 
 function exitScreen(index, exitDelay) {
     const grid = grids[index];
     const heading = headings[index];
-    const gridColumns = document.querySelectorAll('.column');
 
-    gridColumns.forEach((e) => {
-        e.classList.remove('animate-before');
-        e.classList.add('animate-after');
+    //thêm hiệu ứng trượt ra cho các columns (ẩn đi)
+    gridColumns.each(function () {
+        $(this).addClass('animate-slide-out');
+        // $(this).removeClass('animate-slide-in').addClass('animate-slide-out');
     });
 
-    heading.classList.remove('animate-before');
-    heading.classList.add('animate-after');
-
+    //ẩn nhóm grid hiện tại sau khoảng thời gian exitDelay
     setTimeout(() => {
         grid.classList.remove('active');
     }, exitDelay);
+
+    //thêm hiệu ứng trượt ra cho heading
+    heading.classList.add('animate-slide-out');
+    // heading.classList.remove('animate-slide-in');
 }
 
 function setupAnimationCycle({ timeFreezePerScreen, exitDelay }) {
@@ -40,8 +46,10 @@ function setupAnimationCycle({ timeFreezePerScreen, exitDelay }) {
     function nextCycle() {
         const currentIndex = nextIndex;
 
+        //hiển thị nhóm elements (grid, columns, heading) hiện tại
         enterScreen(currentIndex);
 
+        //ẩn đi nhóm elements (grid, columns, heading) hiện tại
         setTimeout(
             () => exitScreen(currentIndex, exitDelay),
             timeFreezePerScreen
@@ -50,18 +58,38 @@ function setupAnimationCycle({ timeFreezePerScreen, exitDelay }) {
         nextIndex = nextIndex >= grids.length - 1 ? 0 : nextIndex + 1;
     }
 
+    //khởi chạy chu kỳ lần đầu tiên
     nextCycle();
 
+    //lặp lại chu kỳ
     setInterval(nextCycle, cycleTime);
-
-    // enterScreen(initialScreenIndex);
-
-    // setTimeout(() => {
-    //     exitScreen(initialScreenIndex, exitDelay);
-    // }, timeFreezePerScreen);
 }
 
 setupAnimationCycle({
     timeFreezePerScreen: 3000, //ms
     exitDelay: 300 * 7, //ms
 });
+
+//Validate form
+(function () {
+    'use strict';
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation');
+
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms).forEach(function (form) {
+        form.addEventListener(
+            'submit',
+            function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+
+                form.classList.add('was-validated');
+            },
+            false
+        );
+    });
+})();
