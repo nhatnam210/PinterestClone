@@ -11,13 +11,25 @@ $white: #fff;
 $red: #e60023;
 $red-hovered: #ad081b;
 $black: #111;
+$text: #333333;
+$text-muted : #767676;
+
 $gray-light: #efefef;
 $gray-hovered: #e2e2e2;
+$gray-border: #ddd;
+$gray-border-hovered: #d0d0d0;
+$line: #dedede;
+
+$blue-focus : #0084ff80;
+$blue-fb: #1877f2;
+
 
 //Timing
 $fade-duration: 1s;
-$columns-transition-delay: .2s;
+$columns-transition-delay: 0.2s;
 
 //Styles
 $radius-image: 16px;
+$radius-input: 16px;
 $radius-btn: 24px;
+$radius-modal: 32px;

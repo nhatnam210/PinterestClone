@@ -5,11 +5,19 @@ header {
 
     padding: 15px 28px 15px 24px;
 
-    h3 {
-        color: $red;
-        font-size: 20px;
-        font-weight: 700;
+    .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-left: 4px;
+            color: $red;
+        }
     }
+
     nav {
         display: flex;
         align-items: center;
@@ -18,51 +26,11 @@ header {
             display: flex;
             li {
                 padding: 16px;
-                a {
-                    color: $black;
-                    font-size: 16px;
-                    font-weight: 700;
-
-                    &:hover {
-                        color: $black;
-                        text-decoration: underline;
-                    }
-                }
             }
         }
         .buttons {
             display: flex;
             margin-left: 24px;
-
-            button {
-                padding: 8px 12px;
-                border-radius: $radius-btn;
-
-                font-size: 16px;
-                font-weight: 700;
-            }
-
-            .login {
-                color: $white;
-                background-color: $red;
-
-                &:hover,
-                &:active,
-                &:focus {
-                    background-color: $red-hovered;
-                }
-            }
-
-            .signup {
-                margin-left: 16px;
-                background-color: $gray-light;
-
-                &:hover,
-                &:active,
-                &:focus {
-                    background-color: $gray-hovered;
-                }
-            }
         }
     }
 }

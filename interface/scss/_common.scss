@@ -1,0 +1,95 @@
+* {
+    font-family: $font-1;
+}
+
+a {
+    color: $black;
+    font-size: 16px;
+    font-weight: 700;
+
+    &:hover {
+        color: $black;
+        text-decoration: underline;
+    }
+}
+
+button {
+    padding: 8px 12px;
+    border-radius: $radius-btn;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+button,
+a {
+    transition: transform 85ms ease-out;
+}
+
+.logo {
+    fill: $red;
+}
+
+
+.btn-red {
+    color: $white;
+    background-color: $red;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: $red-hovered;
+    }
+}
+
+.btn-gray {
+    margin-left: 16px;
+    background-color: $gray-light;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: $gray-hovered;
+    }
+}
+
+.text-color {
+    color: $text;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.or {
+    font-size: 14px;
+    width: 100%;
+    margin: 16px auto;
+}
+
+form {
+    width: 100%;
+}
+
+input,
+.form-control {
+    width: 100%;
+    border: 2px solid $gray-border;
+    border-radius: $radius-input;
+    margin-bottom: 8px;
+    padding: 8px 16px;
+    outline: navajowhite;
+
+    &:focus {
+        box-shadow: 0 0 0 4px $blue-focus;
+        outline: 0;
+    }
+
+    &:hover {
+        border-color: $gray-border-hovered;
+    }
+}
+
+.invalid-feedback {
+    font-size: 12px;
+}
