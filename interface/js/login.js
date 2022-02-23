@@ -8,15 +8,15 @@ function enterScreen(index) {
     const heading = headings[index];
 
     //hiển thị nhóm grid hiện tại
-    grid.classList.add('active');
+    $(grid).addClass('active');
 
     //loại bỏ các hiệu ứng animate của columns (hiển thị)
     gridColumns.each(function () {
         $(this).removeClass('animate-slide-in animate-slide-out');
     });
 
-    //loại bỏ các hiệu ứng animate của headings
-    heading.classList.remove('animate-slide-in', 'animate-slide-out');
+    //loại bỏ các hiệu ứng animate của headings (hiển thị)
+    $(heading).removeClass('animate-slide-in animate-slide-out');
 }
 
 function exitScreen(index, exitDelay) {
@@ -31,11 +31,11 @@ function exitScreen(index, exitDelay) {
 
     //ẩn nhóm grid hiện tại sau khoảng thời gian exitDelay
     setTimeout(() => {
-        grid.classList.remove('active');
+        $(grid).removeClass('active');
     }, exitDelay);
 
-    //thêm hiệu ứng trượt ra cho heading
-    heading.classList.add('animate-slide-out');
+    //thêm hiệu ứng trượt ra cho heading (ẩn đi)
+    $(heading).addClass('animate-slide-out');
     // heading.classList.remove('animate-slide-in');
 }
 
