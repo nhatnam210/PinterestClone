@@ -21,15 +21,15 @@ function enterScreen(index) {
 
 function exitScreen(index, exitDelay) {
     const grid = grids[index];
-            const heading = headings[index];
+    const heading = headings[index];
 
-            //thêm hiệu ứng trượt ra cho các columns (ẩn đi)
-              gridColumns.each(function () {
+    //thêm hiệu ứng trượt ra cho các columns (ẩn đi)
+    gridColumns.each(function () {
         $(this).addClass('animate-slide-out');
         // $(this).removeClass('animate-slide-in').addClass('animate-slide-out');
     });
 
-                //ẩn nhóm grid hiện tại sau khoảng thời gian exitDelay
+    //ẩn nhóm grid hiện tại sau khoảng thời gian exitDelay
     setTimeout(() => {
         $(grid).removeClass('active');
     }, exitDelay);
@@ -51,18 +51,18 @@ function setupAnimationCycle({ timeFreezePerScreen, exitDelay }) {
 
         //ẩn đi nhóm elements (grid, columns, heading) hiện tại
         setTimeout(
-                 () => exitScreen(currentIndex, exitDelay),
-            timeFreezePerScreen
+            () => exitScreen(currentIndex, exitDelay),
+            timeFreezePerScreen,
         );
 
-                  nextIndex = nextIndex >= grids.length - 1 ? 0 : nextIndex + 1;
+        nextIndex = nextIndex >= grids.length - 1 ? 0 : nextIndex + 1;
     }
 
     //khởi chạy chu kỳ lần đầu tiên
-                           nextCycle();
+    nextCycle();
 
     //lặp lại chu kỳ
-                           setInterval(nextCycle, cycleTime);
+    setInterval(nextCycle, cycleTime);
 }
 
 setupAnimationCycle({
@@ -72,24 +72,24 @@ setupAnimationCycle({
 
 //Validate form
 (function () {
-                'use strict';
+    'use strict';
 
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                          var forms = document.querySelectorAll('.needs-validation');
+    var forms = document.querySelectorAll('.needs-validation');
 
     // Loop over them and prevent submission
     Array.prototype.slice.call(forms).forEach(function (form) {
-                    form.addEventListener(
+        form.addEventListener(
             'submit',
-                                     function (event) {
+            function (event) {
                 if (!form.checkValidity()) {
-                                event.preventDefault();
+                    event.preventDefault();
                     event.stopPropagation();
                 }
 
                 form.classList.add('was-validated');
             },
-            false
+            false,
         );
     });
 })();
