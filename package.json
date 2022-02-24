@@ -6,7 +6,7 @@
     "scripts": {
         "watch": "node-sass --watch interface/scss --output interface/css",
         "formatGit": "lint-staged --allow-empty",
-        "formatCode": "prettier --single-quote --trailing-comma all --tab-width 4 --write src/**/*.{js,json,css}",
+        "formatCode": "prettier --single-quote --trailing-comma all --tab-width 4 --write src/**/*.{js,json,css,scss}",
         "start": "nodemon --inspect src/index.js",
         "test": "echo \"Error: no test specified\" && exit 1",
         "prepare": "husky install"
@@ -38,6 +38,6 @@
         "prettier": "^2.5.1"
     },
     "lint-staged": {
-        "src/**/*.{js,json,css}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
+        "src/**/*.{js,json,css,scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
     }
 }
