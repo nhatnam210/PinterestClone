@@ -1,11 +1,12 @@
 @import './variables';
 @import './reset';
 
+//common
+@import './animations';
+@import './common';
+
 //Login page
 @import './loginGird';
 @import './loginHeading';
 @import './loginHeader';
 @import './loginModal';
-
-@import './animations';
-@import './common';

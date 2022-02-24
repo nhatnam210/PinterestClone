@@ -52,7 +52,7 @@ function setupAnimationCycle({ timeFreezePerScreen, exitDelay }) {
         //ẩn đi nhóm elements (grid, columns, heading) hiện tại
         setTimeout(
             () => exitScreen(currentIndex, exitDelay),
-            timeFreezePerScreen
+            timeFreezePerScreen,
         );
 
         nextIndex = nextIndex >= grids.length - 1 ? 0 : nextIndex + 1;
@@ -89,7 +89,7 @@ setupAnimationCycle({
 
                 form.classList.add('was-validated');
             },
-            false
+            false,
         );
     });
 })();
