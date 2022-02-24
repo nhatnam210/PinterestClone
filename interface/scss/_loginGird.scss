@@ -10,7 +10,7 @@
 
     max-height: 0px;
     visibility: hidden;
-    pointer-events: none; 
+    pointer-events: none;
 
     &.active {
         max-height: unset;
