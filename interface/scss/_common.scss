@@ -28,7 +28,7 @@ button {
 
 button,
 a {
-    transition: transform 85ms ease-out;
+    transition: transform 2s ease-out;
 }
 
 button.alw-active {
@@ -38,7 +38,10 @@ button.alw-active {
 }
 
 .logo {
-    fill: $red;
+    color: $red;
+    i {
+        font-size: 32px;
+    }
 }
 
 .btn-red {
@@ -77,18 +80,20 @@ form {
 
 input,
 .form-control {
-    border: 2px solid $gray-border;
-    border-radius: $radius-input;
-    padding: 8px 16px;
-    outline: navajowhite;
+    &.has-blue-focus {
+        border: 2px solid $gray-border;
+        border-radius: $radius-input;
+        padding: 8px 16px;
+        outline: navajowhite;
 
-    &:focus {
-        box-shadow: 0 0 0 4px $blue-focus;
-        outline: 0;
-    }
+        &:focus {
+            box-shadow: 0 0 0 4px $blue-focus;
+            outline: 0;
+        }
 
-    &:hover {
-        border-color: $gray-border-hovered;
+        &:hover {
+            border-color: $gray-border-hovered;
+        }
     }
 }
 
