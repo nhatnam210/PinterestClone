@@ -7,7 +7,6 @@ $font-2: -apple-system, 'Roboto', sans-serif;
 $font-3: -apple-system, 'Ubuntu', sans-serif;
 
 //Colors
-$white: #fff;
 $red: #e60023;
 $red-hovered: #ad081b;
 
@@ -15,9 +14,15 @@ $black: #111;
 $black-bg-0-5: rgba(0,0,0,0.5); 
 
 $text: #333333;
-$text-muted : #767676;
+$text-muted: #767676;
+$shadow-modal: #00000073;
+
 
 $gray: #808080;
+
+$white: #fff;
+$background-body: #f6f6f6;
+
 $gray-light: #efefef;
 $gray-hovered: #e2e2e2;
 
@@ -28,15 +33,16 @@ $line: #dedede;
 $brow-btn: rgb(128, 99, 88);
 
 $blue-focus : #0084ff80;
-$blue-fb: #1877f2;
+$blue-focus: #0084ff80;
 
+$blue-fb: #1877f2;
 
 //Timing
 $fade-duration: 1s;
 $columns-transition-delay: 0.2s;
 
 //Styles
-$radius-image: 16px;
+$radius-img: 16px;
 $radius-input: 16px;
 $radius-btn: 24px;
 $radius-modal: 32px;

@@ -1,6 +1,13 @@
 @import './variables';
 @import './reset';
 
+//common
+@import './animations';
+@import './common';
+
+//navabar
+@import './navabar';
+
 //Login page
 @import './loginGird';
 @import './loginHeading';

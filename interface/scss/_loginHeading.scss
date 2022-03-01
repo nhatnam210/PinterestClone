@@ -10,6 +10,7 @@
     .text {
         font-size: 60px;
         font-weight: 600;
+        white-space: nowrap;
     }
 
     .wrapper {
@@ -24,9 +25,8 @@
 
         .text {
             color: $red;
-            white-space: nowrap;
 
-            transition-duration: 1s;
+            transition-duration: $fade-duration;
         }
     }
 }

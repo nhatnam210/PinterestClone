@@ -1,117 +1,153 @@
-.modal-content {
-    align-items: center;
+.account-modal {
+    max-width: 484px;
 
-    padding: 20px 10px 24px;
-    border-radius: $radius-modal;
-    min-height: 400px;
-    position: relative;
-
-    background-color: $white;
-    border: none;
-
-    .modal-header {
-        display: flex;
-        justify-content: center;
+    .modal-content {
         align-items: center;
-        flex-direction: column;
-        border: none;
-        padding: 0 16px;
 
-        .logo {
-            margin: 10px 0 20px 0;
-        }
+        padding: 20px 10px 24px;
+        border-radius: $radius-modal;
+        min-height: 400px;
+        position: relative;
 
-        .modal-title {
-            color: $text;
-            font-size: 36px;
-            font-weight: 600;
-            letter-spacing: -1.2px;
-
-            padding-left: 16px;
-            padding-right: 16px;
-            margin-bottom: 18px;
-            -webkit-font-smoothing: antialiased;
-            word-break: break-word;
-        }
-    }
-
-    .modal-btn-close {
-        position: absolute;
-        top: 0;
-        right: 0;
-
-        margin: 20px;
-        padding: 12px;
-        border-radius: 50%;
-
-        background-color: transparent;
-        transition: transform 85ms ease-out;
-
-        &:hover {
-            background-color: $gray-light;
-        }
-    }
-
-    .modal-body {
-        display: flex;
-        flex-direction: column;
-
-        padding: 0;
-        margin: 0 auto;
-        width: 268px;
+        background-color: $white;
         border: none;
 
-        a {
-            font-size: 14px;
-            margin-top: 5px;
-        }
+        .modal-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
 
-        .btn-submit-form {
-            margin-top: 20px;
-        }
-
-        .btn-facebook-login {
-            color: $white;
-            background-color: $blue-fb;
-        }
-    }
-
-    .modal-footer {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-
-        border: none;
-        padding: 0;
-        margin: 15px;
-
-        * {
-            font-size: 11px;
-            margin: 0;
-        }
-
-        p {
-            color: $text-muted;
-        }
-
-        .line {
-            border-bottom: 1px solid $line;
-            margin: 10px auto;
-            width: 110px;
-        }
-
-        button {
-            display: block;
-            padding: 0px;
             border: none;
-            margin-left: 5px;
+            padding: 0 16px;
 
-            color: $text;
-            background: none;
+            .logo {
+                margin: 10px 0 20px 0;
+                i {
+                    font-size: 38px;
+                }
+            }
 
-            font-weight: bold;
-            text-align: left;
+            .modal-title {
+                color: $text;
+
+                font-size: 36px;
+                font-weight: 600;
+                letter-spacing: -1.2px;
+
+                padding-left: 16px;
+                padding-right: 16px;
+                margin-bottom: 18px;
+
+                -webkit-font-smoothing: antialiased;
+                word-break: break-word;
+
+                &--small {
+                    color: $black;
+                    // margin: -20px 0 32px 0;
+                    margin: {
+                        top: -20px;
+                        right: 0;
+                        bottom: 32px;
+                        left: 0;
+                    }
+                }
+            }
+        }
+
+        .modal-btn-close {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            padding: 12px;
+            margin: 20px;
+            border-radius: 50%;
+
+            background-color: transparent;
+            transition: transform 85ms ease-out;
+
+            &:hover {
+                background-color: $gray-light;
+            }
+        }
+
+        .modal-body {
+            display: flex;
+            flex-direction: column;
+
+            width: 268px;
+            padding: 0;
+            margin: 0 auto;
+            border: none;
+
+            a {
+                font-size: 14px;
+                margin-top: 5px;
+            }
+
+            .btn-submit-form {
+                margin-top: 20px;
+
+                &:focus {
+                    box-shadow: 0 0 0 4px $blue-focus;
+                    outline: 0;
+                }
+            }
+
+            .btn-account-facebook {
+                color: $white;
+                background-color: $blue-fb;
+            }
+            .btn-account-google {
+                margin-top: 10px;
+            }
+        }
+
+        .modal-footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            padding: 0;
+            margin: 15px;
+            border: none;
+
+            * {
+                font-size: 11px;
+                margin: 0;
+            }
+
+            p {
+                color: $text-muted;
+            }
+
+            .line {
+                border-bottom: 1px solid $line;
+                margin: 10px auto;
+                width: 110px;
+            }
+
+            button {
+                display: block;
+                padding: 0px;
+                border: none;
+                margin-left: 5px;
+
+                color: $text;
+                background: none;
+
+                font-weight: bold;
+                font-size: 12px;
+                text-align: left;
+            }
+        }
+
+        .or {
+            font-size: 14px;
+            width: 100%;
+            margin: 16px auto;
         }
     }
 }
