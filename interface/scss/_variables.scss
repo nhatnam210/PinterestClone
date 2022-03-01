@@ -10,15 +10,22 @@ $font-3: -apple-system, 'Ubuntu', sans-serif;
 $white: #fff;
 $red: #e60023;
 $red-hovered: #ad081b;
+
 $black: #111;
+$black-bg-0-5: rgba(0,0,0,0.5); 
+
 $text: #333333;
 $text-muted : #767676;
 
+$gray: #808080;
 $gray-light: #efefef;
 $gray-hovered: #e2e2e2;
+
 $gray-border: #ddd;
 $gray-border-hovered: #d0d0d0;
 $line: #dedede;
+
+$brow-btn: rgb(128, 99, 88);
 
 $blue-focus : #0084ff80;
 $blue-fb: #1877f2;
@@ -33,3 +40,14 @@ $radius-image: 16px;
 $radius-input: 16px;
 $radius-btn: 24px;
 $radius-modal: 32px;
+
+//Layout
+$card-width: 250px;
+$card-border-radius: 16px;
+$row-increment: 10px;
+$card-small: 26;
+$card-medium: 33;
+$card-large: 45;
+$header-tab-width: 96px;
+$search-nav-width: 101.8px;
+$total-margin-nav: $header-tab-width + $search-nav-width; 
