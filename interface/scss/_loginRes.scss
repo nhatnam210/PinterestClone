@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+    .login-page {
+        .heading {
+            display: none;
+        }
+
+        header {
+            flex-direction: column;
+        }
+    }
+}
