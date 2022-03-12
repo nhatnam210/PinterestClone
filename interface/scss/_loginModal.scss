@@ -13,15 +13,13 @@
         border: none;
 
         .modal-header {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @extend %flex-center;
             flex-direction: column;
 
             border: none;
             padding: 0 16px;
 
-            .logo {
+            .logo__icon {
                 margin: 10px 0 20px 0;
                 i {
                     font-size: 38px;
@@ -34,6 +32,7 @@
                 font-size: 36px;
                 font-weight: 600;
                 letter-spacing: -1.2px;
+                text-align: center;
 
                 padding-left: 16px;
                 padding-right: 16px;
@@ -105,9 +104,7 @@
         }
 
         .modal-footer {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @extend %flex-center;
             flex-direction: column;
 
             padding: 0;

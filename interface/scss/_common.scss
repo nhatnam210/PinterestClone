@@ -13,12 +13,18 @@ a {
     }
 }
 
-%example {
-    box-shadow: 2px 2px 2px yellow;
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%shadow {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 button {
-    // @extend %example;
+    // @extend %lex-center;
     padding: 8px 12px;
     border-radius: $radius-btn;
 
@@ -37,7 +43,7 @@ button.alw-active {
     }
 }
 
-.logo {
+.logo__icon {
     color: $red;
     i {
         font-size: 32px;
@@ -56,7 +62,6 @@ button.alw-active {
 }
 
 .btn-gray {
-    margin-left: 16px;
     background-color: $gray-light;
 
     &:hover,
@@ -107,4 +112,8 @@ input,
 
 .shadow-modal {
     box-shadow: $shadow-modal 0px 2px 10px;
+}
+
+.clearfix {
+    clear: both;
 }

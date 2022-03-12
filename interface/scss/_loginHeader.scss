@@ -1,36 +1,56 @@
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.login-page {
+    header {
+        padding: 15px 28px 15px 24px;
 
-    padding: 15px 28px 15px 24px;
+        .logo-container {
+            @extend %flex-center;
+            height: 60px;
+            float: left;
 
-    .logo-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+            &:hover {
+                text-decoration: none;
+            }
 
-        h3 {
-            font-size: 20px;
-            font-weight: 700;
-            margin-left: 4px;
-            color: $red;
-        }
-    }
+            & span {
+                @extend %flex-center;
+            }
 
-    nav {
-        display: flex;
-        align-items: center;
-
-        ul {
-            display: flex;
-            li {
-                padding: 16px;
+            .logo__brand {
+                margin-left: 4px;
+                color: $red;
+                font-size: 20px;
+                font-weight: 700;
             }
         }
-        .buttons {
-            display: flex;
-            margin-left: 24px;
+
+        nav {
+            float: right;
+
+            ul {
+                display: flex;
+                align-items: center;
+
+                li {
+                    &:not(:last-child) {
+                        padding: 16px;
+                    }
+
+                    a {
+                        display: block;
+                    }
+
+                    &.buttons {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        margin-left: 24px;
+
+                        button {
+                            margin: 0 10px;
+                        }
+                    }
+                }
+            }
         }
     }
 }
