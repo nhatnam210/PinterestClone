@@ -1,11 +1,74 @@
 @media (max-width: 768px) {
-    .login-page {
-        .heading {
-            display: none;
+    header {
+        box-shadow: $shadow-nav 0px 5px 8px -2px;
+    }
+    .menu-toggle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+
+        font-size: 30px;
+
+        float: right;
+        cursor: pointer;
+
+        &::before {
+            content: '\f0c9';
+            font-family: $font-awe;
+            line-height: 40px;
         }
 
-        header {
-            flex-direction: column;
+        &.active {
+            &:before {
+                content: '\f00d';
+            }
+        }
+    }
+
+    nav {
+        display: none;
+        &.active {
+            display: block;
+
+            position: absolute;
+            top: 90px;
+            left: 0;
+            right: 0;
+
+            background-color: $background-body;
+            z-index: 1;
+            box-shadow: $shadow-nav 0px 5px 8px -2px;
+
+            ul {
+                flex-direction: column;
+
+                li {
+                    &.buttons {
+                        margin-left: 0 !important;
+                    }
+
+                    button {
+                        min-width: 150px;
+                        margin-top: 10px !important;
+                    }
+
+                    &:last-child {
+                        order: -1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .heading {
+        .text {
+            font-size: 40px;
         }
     }
 }

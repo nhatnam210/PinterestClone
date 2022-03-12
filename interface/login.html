@@ -20,32 +20,28 @@
                 <!-- header nav -->
                 <header>
                         <div class="logo-container">
-                                <span class="logo"><i class="fa-brands fa-pinterest"></i></span>
-                                <h3>Pinterest</h3>
+                                <span class="logo__icon"><i class="fa-brands fa-pinterest"></i></span>
+                                <span class="logo__brand">Pinterest</span>
                         </div>
+                        <div id="menu-toggle" class="menu-toggle"></div>
                         <nav>
                                 <ul>
-                                        <li>
-                                                <a href="#">About</a>
-                                        </li>
-                                        <li>
-                                                <a href="#">Business</a>
-                                        </li>
-                                        <li>
-                                                <a href="#">Blog</a>
+                                        <li><a href="#">About</a></li>
+                                        <li><a href="#">Business</a></li>
+                                        <li><a href="#">Blog</a></li>
+                                        <li class="buttons">
+                                                <button class="login btn-red alw-active" data-bs-toggle="modal"
+                                                        data-bs-target="#login-modal">
+                                                        Log in
+                                                </button>
+                                                <button class="signup btn-gray alw-active" data-bs-toggle="modal"
+                                                        data-bs-target="#signup-modal">
+                                                        Sign up
+                                                </button>
                                         </li>
                                 </ul>
-                                <div class="buttons">
-                                        <button class="login btn-red alw-active" data-bs-toggle="modal"
-                                                data-bs-target="#login-modal">
-                                                Log in
-                                        </button>
-                                        <button class="signup btn-gray alw-active" data-bs-toggle="modal"
-                                                data-bs-target="#signup-modal">
-                                                Sign up
-                                        </button>
-                                </div>
                         </nav>
+                        <div class="clearfix"></div>
                 </header>
                 <!-- Heading -->
                 <div class="heading">
@@ -700,7 +696,7 @@
                         <div class="modal-dialog modal-dialog-centered account-modal">
                                 <div class="modal-content shadow-modal">
                                         <div class="modal-header">
-                                                <span class="logo"><i class="fa-brands fa-pinterest"></i></span>
+                                                <span class="logo__icon"><i class="fa-brands fa-pinterest"></i></span>
                                                 <h5 class="modal-title">
                                                         Welcome to Pinterest
                                                 </h5>
@@ -770,7 +766,7 @@
                         <div class="modal-dialog modal-dialog-centered account-modal">
                                 <div class="modal-content shadow-modal">
                                         <div class="modal-header">
-                                                <span class="logo"><i class="fa-brands fa-pinterest"></i></span>
+                                                <span class="logo__icon"><i class="fa-brands fa-pinterest"></i></span>
                                                 <h5 class="modal-title">
                                                         Welcome to Pinterest
                                                 </h5>
