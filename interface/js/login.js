@@ -99,4 +99,10 @@ $(document).ready(function () {
         $('#menu-toggle').toggleClass('active');
         $('nav').toggleClass('active');
     });
+
+    // $('body').scroll(function () {
+    //     var scroll = $(window).scrollTop();
+    //     if (scroll >= 100) $('header').addClass('shadow-nav');
+    //     else $('header').removeClass('shadow-nav');
+    // });
 });
