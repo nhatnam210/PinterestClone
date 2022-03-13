@@ -1,10 +1,17 @@
 .login-page {
+    position: relative;
     header {
         padding: 15px 28px 15px 24px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: $white;
+        z-index: 2;
 
         .logo-container {
             @extend %flex-center;
-            height: 60px;
+            height: 55px;
             float: left;
 
             &:hover {
@@ -25,6 +32,7 @@
 
         nav {
             float: right;
+            background-color: $white;
 
             ul {
                 display: flex;
